@@ -38,4 +38,23 @@ export class UnitCartesianCoordinateSystem {
             point.draw(ctx);
         }
     }
+
+    public mapSineWave(ctx: CanvasRenderingContext2D, frequency: number) {
+        ctx.beginPath();
+        ctx.strokeStyle = this.axisColor;
+
+        for(let x = -1; x <= 1; x += 0.01) {
+            const y = Math.sin(2* Math.PI * frequency * x);
+            const mappedX = this.mapX(x);
+            const mappedY = this.mapY(y);
+            if(x === -1) {
+                ctx.moveTo(mappedX, mappedY);
+            } else {
+                ctx.lineTo(mappedX, mappedY);
+            }
+        }
+
+        ctx.stroke();
+
+    }
 }

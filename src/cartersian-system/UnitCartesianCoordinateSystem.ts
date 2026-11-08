@@ -33,7 +33,7 @@ export class UnitCartesianCoordinateSystem {
     public plot(ctx: CanvasRenderingContext2D, points: Array<Point>, pointsMaxX: number, pointsMaxY: number) {
         for(let point of points) {
             const mappedX = this.mapX(point.xPos / pointsMaxX);
-            const mappedY = this.mapY(point.yPost / pointsMaxY);
+            const mappedY = this.mapY(point.yPos / pointsMaxY);
             point.setDimensions(mappedX, mappedY);
             point.draw(ctx);
         }

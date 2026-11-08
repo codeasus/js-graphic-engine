@@ -2,10 +2,10 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "ESNext",
+    "moduleResolution": "Bundler",
     "rootDir": "./",
     "outDir": "./dist",
-    "strict": true,
-    "moduleResolution": "node"
+    "strict": true
   },
   "include": ["**/*.ts"]
 }

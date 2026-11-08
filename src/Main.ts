@@ -25,7 +25,7 @@ const points: Array<Point> = [
 ]
 
 if (ctx != null) {
-    gridBasedCanvas.setDimensions(1600, 1000, 50);
+    gridBasedCanvas.setDimensions(1600, 1000, 20);
     gridBasedCanvas.drawBackground(ctx);
     gridBasedCanvas.toggleGridVisibility(ctx);
     
